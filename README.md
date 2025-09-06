@@ -1,1 +1,1 @@
-# To-Do-List-TypeScript-Practice-
+# To-Do List (TypeScript Practice)
