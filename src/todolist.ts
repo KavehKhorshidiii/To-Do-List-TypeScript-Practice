@@ -30,12 +30,11 @@ const addTodoBtnFunction = () => {
     todoInput.focus()
 }
 
+
 addTodoBtn.addEventListener("click", addTodoBtnFunction)
 
     
-
-
-
+// clear all ToDos
 clearTodos.addEventListener("click" , () => {
     ToDo.length = 0
     addTodoBtnFunction()
