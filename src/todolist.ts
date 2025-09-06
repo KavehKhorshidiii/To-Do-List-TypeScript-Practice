@@ -3,9 +3,8 @@ const addTodoBtn = document.querySelector(".add-todo") as HTMLButtonElement
 const clearTodos = document.querySelector(".clear-todos") as HTMLButtonElement
 const todoList = document.querySelector(".todoList") as HTMLUListElement
 
-// console.log(todoList)
 
-
+// interface
 interface ToDoType { 
     id: number;
     text: string;
