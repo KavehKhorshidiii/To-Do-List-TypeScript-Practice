@@ -4,7 +4,7 @@ const clearTodos = document.querySelector(".clear-todos");
 const todoList = document.querySelector(".todoList");
 // todo list
 const ToDo = [];
-addTodoBtn.addEventListener("click", () => {
+const addTodoBtnFunction = () => {
     const NewToDo = { id: ToDo.length + 1, text: todoInput.value };
     if (NewToDo.text !== "") {
         ToDo.push(NewToDo);
@@ -15,7 +15,8 @@ addTodoBtn.addEventListener("click", () => {
         </li>`).join('');
     todoInput.value = "";
     todoInput.focus();
-});
+};
+addTodoBtn.addEventListener("click", addTodoBtnFunction);
 clearTodos.addEventListener("click", () => {
     ToDo.length = 0;
 });

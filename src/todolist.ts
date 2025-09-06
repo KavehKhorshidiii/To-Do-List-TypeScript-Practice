@@ -14,8 +14,7 @@ interface ToDoType {
 const ToDo: ToDoType[] = []
 
 
-addTodoBtn.addEventListener("click", () => {
-
+const addTodoBtnFunction = () => {
     const NewToDo:ToDoType = {id: ToDo.length + 1  ,  text:todoInput.value}
 
     if(NewToDo.text !== ""){ ToDo.push(NewToDo) }
@@ -29,8 +28,12 @@ addTodoBtn.addEventListener("click", () => {
 
     todoInput.value = ""
     todoInput.focus()
+}
+
+addTodoBtn.addEventListener("click", addTodoBtnFunction)
+
     
-})
+
 
 
 clearTodos.addEventListener("click" , () => {
