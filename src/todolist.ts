@@ -32,3 +32,7 @@ addTodoBtn.addEventListener("click", () => {
     
 })
 
+
+clearTodos.addEventListener("click" , () => {
+    ToDo.length = 0
+})

@@ -2,6 +2,7 @@ const todoInput = document.querySelector(".todo-value");
 const addTodoBtn = document.querySelector(".add-todo");
 const clearTodos = document.querySelector(".clear-todos");
 const todoList = document.querySelector(".todoList");
+// todo list
 const ToDo = [];
 addTodoBtn.addEventListener("click", () => {
     const NewToDo = { id: ToDo.length + 1, text: todoInput.value };
@@ -14,5 +15,8 @@ addTodoBtn.addEventListener("click", () => {
         </li>`).join('');
     todoInput.value = "";
     todoInput.focus();
+});
+clearTodos.addEventListener("click", () => {
+    ToDo.length = 0;
 });
 //# sourceMappingURL=todolist.js.map
