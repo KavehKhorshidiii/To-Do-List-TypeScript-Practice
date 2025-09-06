@@ -10,6 +10,7 @@ interface ToDoType {
     text: string;
 }
 
+// todo list
 const ToDo: ToDoType[] = []
 
 
