@@ -12,7 +12,8 @@
 
 ## 🌐 Live Demo  
 
-[Open the Live Website](https://to-do-list-typescript-practice.vercel.app/)
+[Open the Live Website](https://to-do-list-type-script-practice.vercel.app/)
+
 
 <br/>
 <br/>
