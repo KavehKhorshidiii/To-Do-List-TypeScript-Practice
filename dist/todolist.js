@@ -17,9 +17,24 @@ const addTodoBtnFunction = () => {
         </li>`).join('');
     todoInput.value = "";
     todoInput.focus();
+    setLocalStorage();
 };
+// set localStorage
+const setLocalStorage = () => {
+    localStorage.setItem("todos", JSON.stringify(ToDo));
+};
+//push local storage to DOM
+window.addEventListener("load", () => {
+    ToDo.length = 0;
+    ToDo.push(...JSON.parse(localStorage.getItem("todos")));
+    addTodoBtnFunction();
+});
 // add new todo (Event)
 addTodoBtn.addEventListener("click", addTodoBtnFunction);
+// add new todo with keyDown Event
+window.addEventListener('keydown', (e) => {
+    e.key === "Enter" ? addTodoBtnFunction() : null;
+});
 // delete todo
 const deleteToDo = (ToDoId) => {
     const filterToDo = ToDo.filter((item) => {
