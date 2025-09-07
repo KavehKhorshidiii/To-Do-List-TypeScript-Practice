@@ -66,7 +66,7 @@ This is my first experience with TypeScript, and the goal was just learning and 
 
 1. Clone the project 
 ```bash
-git clone https://github.com/KavehKhorshidiii/To-DoList---TypeScriptPractice.git
+git clone https://github.com/KavehKhorshidiii/To-DoList--TypeScriptPractice.git
 ```
 2. Move into the project directory
 ```bash
