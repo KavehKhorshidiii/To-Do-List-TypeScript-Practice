@@ -70,7 +70,7 @@ git clone https://github.com/KavehKhorshidiii/To-DoList--TypeScriptPractice.git
 ```
 2. Move into the project directory
 ```bash
-cd To-DoList---TypeScriptPractice
+cd To-DoList--TypeScriptPractice
 ```
 3. Install dependencies
 ```bash
