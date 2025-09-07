@@ -1,8 +1,9 @@
-const todoInput = document.querySelector(".todo-value") as HTMLInputElement
-const addTodoBtn = document.querySelector(".add-todo") as HTMLButtonElement
-const clearTodos = document.querySelector(".clear-todos") as HTMLButtonElement
-const todoList = document.querySelector(".todoList") as HTMLUListElement
-const iconBin = document.querySelector("icon") as HTMLButtonElement
+const todoInput = document.querySelector<HTMLInputElement>(".todo-value")!
+const addTodoBtn = document.querySelector<HTMLButtonElement>(".add-todo")!
+const clearTodos = document.querySelector<HTMLButtonElement>(".clear-todos")!
+const todoList = document.querySelector<HTMLUListElement>(".todoList")!
+const iconBin = document.querySelector<HTMLButtonElement>("icon")!
+
 
 
 // interface
@@ -15,12 +16,12 @@ interface ToDoType {
 const ToDo: ToDoType[] = []
 
 // add new todo (Function)
-const addTodoBtnFunction = () => {
+const addTodoBtnFunction = ():void => {
     const NewToDo: ToDoType = { id: ToDo.length + 1, text: todoInput.value }
 
     if (NewToDo.text !== "") { ToDo.push(NewToDo) }
 
-    todoList.innerHTML = ToDo.map(thisToDo =>
+    todoList.innerHTML = ToDo.map((thisToDo:ToDoType) =>
         `<li class="todoList">
             ${thisToDo.text}
             <span onclick="deleteToDo(${thisToDo.id})" class="icon"><i class="fas fa-trash"></i></span>
@@ -35,7 +36,7 @@ const addTodoBtnFunction = () => {
 addTodoBtn.addEventListener("click", addTodoBtnFunction)
 
 // delete todo
-const deleteToDo = (ToDoId: number) => {
+const deleteToDo = (ToDoId: number):void => {
 
     const filterToDo = ToDo.filter((item:ToDoType) => {
         return item.id !== ToDoId   

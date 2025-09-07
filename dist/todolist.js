@@ -11,7 +11,7 @@ const addTodoBtnFunction = () => {
     if (NewToDo.text !== "") {
         ToDo.push(NewToDo);
     }
-    todoList.innerHTML = ToDo.map(thisToDo => `<li class="todoList">
+    todoList.innerHTML = ToDo.map((thisToDo) => `<li class="todoList">
             ${thisToDo.text}
             <span onclick="deleteToDo(${thisToDo.id})" class="icon"><i class="fas fa-trash"></i></span>
         </li>`).join('');
